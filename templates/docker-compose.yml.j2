@@ -1,0 +1,24 @@
+---
+
+version: '2'
+services:
+
+  postgres:
+    image: {{ postgres_image }}
+    container_name: {{ postgres_container_name }}
+    hostname: {{ postgres_hostname }}
+    restart: unless-stopped
+    ports:
+      - "{{ postgres_port }}:5432"
+    volumes:
+      - "{{ postgres_data_dir }}:/var/lib/postgresql/data:Z"
+    environment:
+      POSTGRES_DB: {{ postgres_database }}
+      POSTGRES_USER: {{ postgres_username }}
+      POSTGRES_PASSWORD: {{ postgres_password }}
+      PGDATA: /var/lib/postgresql/data/pgdata
+    logging:
+      driver: json-file
+      options:
+        max-size: '100m'
+        max-file: '5'
