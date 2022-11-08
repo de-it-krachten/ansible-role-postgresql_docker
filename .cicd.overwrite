@@ -2,11 +2,10 @@
 
 # Generic
 generic:
-  role: ansible-role-postgres_docker
-  role_short: postgres_docker
+  role: ansible-role-postgresql_docker
+  role_short: postgresql_docker
   role_description: |
-    Setup Postgres database in Docker
-    <basic role description>
+    Setup PostgreSQL database in Docker
   collections: []
 
 # Supported platforms
@@ -78,4 +77,13 @@ platforms:
 # Molecule
 molecule:
   requirements:
-    roles_extra: []
+    roles_extra:
+      - facts
+  prepare:
+    roles:
+      - facts
+  converge:
+    vars:
+      postgresql_database: db1
+      postgresql_username: user1
+      postgresql_password: password1

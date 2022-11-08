@@ -33,3 +33,7 @@ roles:
     src: https://github.com/de-it-krachten/ansible-role-unbound.git
     version: main
     scm: git
+  - name: facts
+    src: https://github.com/de-it-krachten/ansible-role-facts.git
+    version: main
+    scm: git

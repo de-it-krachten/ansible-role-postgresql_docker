@@ -12,7 +12,7 @@ lint: |
   rm -f requirements.yml
 platforms:
 {% for platform in MOLECULE_DISTROS %}
-  - name: postgres_docker-{{ platform.name }}-node1
+  - name: postgresql_docker-{{ platform.name }}-node1
     image: "{{ platform.image }}"
     rhsm: {{ platform.rhsm | default(False) }}
     command: ${MOLECULE_DOCKER_COMMAND:-""}
@@ -26,13 +26,13 @@ platforms:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
 {% if platform.volumes is defined %}
 {% for volume in platform.volumes %}
-      - postgres_docker-{{ volume }}
+      - postgresql_docker-{{ volume }}
 {% endfor %}
 {% endif %}
 {% if platform.networks is defined %}
     networks:
 {% for network in platform.networks %}
-      - name: postgres_docker-{{ network }}
+      - name: postgresql_docker-{{ network }}
 {% endfor %}
 {% endif %}
     privileged: {{ platform.privileged | default(True) }}

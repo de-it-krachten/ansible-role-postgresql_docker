@@ -3,7 +3,11 @@
 - name: Converge
   hosts: all
   become: "yes"
+  vars:
+    postgresql_database: db1
+    postgresql_username: user1
+    postgresql_password: password1
   tasks:
-    - name: Include role 'ansible-role-postgres_docker'
+    - name: Include role 'ansible-role-postgresql_docker'
       ansible.builtin.include_role:
-        name: ansible-role-postgres_docker
+        name: ansible-role-postgresql_docker

@@ -1,10 +1,9 @@
-[![CI](https://github.com/de-it-krachten/ansible-role-postgres_docker/workflows/CI/badge.svg?event=push)](https://github.com/de-it-krachten/ansible-role-postgres_docker/actions?query=workflow%3ACI)
+[![CI](https://github.com/de-it-krachten/ansible-role-postgresql_docker/workflows/CI/badge.svg?event=push)](https://github.com/de-it-krachten/ansible-role-postgresql_docker/actions?query=workflow%3ACI)
 
 
-# ansible-role-postgres_docker
+# ansible-role-postgresql_docker
 
-Setup Postgres database in Docker
-<basic role description>
+Setup PostgreSQL database in Docker
 
 
 
@@ -44,31 +43,31 @@ Note:
 ## Role Variables
 ### defaults/main.yml
 <pre><code>
-# Postgres version
-postgres_version: 12
-
-# Postgres docker image
-postgres_image: postgres:{{ postgres_version }}
-
-# Name of the postgres container
-postgres_container_name: postgres
-
-# Name of the postgres container
-postgres_hostname: postgres
-
-# Directory with compose file
-postgres_compose_dir: /export/docker/postgres/compose
-
-# Directory with data files
-postgres_data_dir: /data/docker/postgres/data
+# Database name & credentials
+# postgresql_database: db1
+# postgresql_username: user1
+# postgresql_password: password1
 
 # External port
-postgres_port: 5432
+postgresql_port: 5432
 
-# Database name & credentials
-postgres_database: db1
-postgres_username: user1
-postgres_password: password1
+# Postgres version
+postgresql_version: 12
+
+# Postgres docker image
+postgresql_image: postgres:{{ postgresql_version }}
+
+# Name of the postgres container
+postgresql_container_name: postgres
+
+# Name of the postgres container
+postgresql_hostname: postgres
+
+# Directory with compose file
+postgresql_compose_dir: /export/docker/postgres/compose
+
+# Directory with data files
+postgresql_data_dir: /export/docker/postgres/data
 </pre></code>
 
 
@@ -77,11 +76,15 @@ postgres_password: password1
 ## Example Playbook
 ### molecule/default/converge.yml
 <pre><code>
-- name: sample playbook for role 'postgres_docker'
+- name: sample playbook for role 'postgresql_docker'
   hosts: all
   become: "yes"
+  vars:
+    postgresql_database: db1
+    postgresql_username: user1
+    postgresql_password: password1
   tasks:
-    - name: Include role 'postgres_docker'
+    - name: Include role 'postgresql_docker'
       ansible.builtin.include_role:
-        name: postgres_docker
+        name: postgresql_docker
 </pre></code>
