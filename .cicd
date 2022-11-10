@@ -2,8 +2,8 @@
 
 # Generic
 generic:
-  role: ansible-role-postgres_docker
-  role_short: postgres_docker
+  role: ansible-role-postgresql_docker
+  role_short: postgresql_docker
   role_description: |
     <put description in .cicd.overwrite>
 
@@ -307,9 +307,9 @@ platforms_overwrite: {}
 
 # Ansible galaxy
 galaxy:
-  role_name: postgres_docker
+  role_name: postgresql_docker
   namespace: de_it_krachten
-  description: postgres_docker
+  description: postgresql_docker
   author: Mark van Huijstee
   company: De IT Krachten BV
   license: MIT
@@ -340,7 +340,7 @@ github:
   fail_fast: false
   parallel: true
   owner: de-it-krachten
-  repo: ansible-role-postgres_docker
+  repo: ansible-role-postgresql_docker
   lint_matrix:
     - name: ansible_2.9
       ansible: "ansible==2.9.27"
