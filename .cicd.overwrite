@@ -40,6 +40,9 @@ platforms:
   oraclelinux8:
     ci: false
     supported: true
+  oraclelinux9:
+    ci: false
+    supported: true
   almalinux8:
     ci: false
     supported: true
@@ -78,10 +81,10 @@ platforms:
 molecule:
   requirements:
     roles_extra:
-      - facts
+      - deitkrachten.facts
   prepare:
     roles:
-      - facts
+      - deitkrachten.facts
   converge:
     vars:
       postgresql_database: db1
