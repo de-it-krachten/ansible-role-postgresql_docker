@@ -25,6 +25,7 @@ Supported platforms
 - RockyLinux 8<sup>1</sup>
 - RockyLinux 9<sup>1</sup>
 - OracleLinux 8<sup>1</sup>
+- OracleLinux 9<sup>1</sup>
 - AlmaLinux 8<sup>1</sup>
 - AlmaLinux 9<sup>1</sup>
 - Debian 10 (Buster)<sup>1</sup>
@@ -32,8 +33,8 @@ Supported platforms
 - Ubuntu 18.04 LTS<sup>1</sup>
 - Ubuntu 20.04 LTS<sup>1</sup>
 - Ubuntu 22.04 LTS<sup>1</sup>
-- Fedora 35<sup>1</sup>
 - Fedora 36<sup>1</sup>
+- Fedora 37<sup>1</sup>
 - Alpine 3<sup>1</sup>
 - Docker dind (CI only)
 
