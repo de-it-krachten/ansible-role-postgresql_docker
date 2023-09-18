@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/de-it-krachten/ansible-role-postgresql_docker/compare/v1.1.0...v1.2.0) (2023-09-18)
+
+
+### Features
+
+* Update supported platforms & CI ([eba36c6](https://github.com/de-it-krachten/ansible-role-postgresql_docker/commit/eba36c6691ed6e819e08d9fae7534959444d6620))
+
 # [1.1.0](https://github.com/de-it-krachten/ansible-role-postgresql_docker/compare/v1.0.1...v1.1.0) (2023-05-06)
 
 
