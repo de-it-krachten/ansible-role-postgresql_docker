@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/de-it-krachten/ansible-role-postgresql_docker/compare/v1.2.0...v1.3.0) (2024-06-04)
+
+
+### Features
+
+* Add support for Ubuntu 24.04 LTS + Fedora 40 ([38da442](https://github.com/de-it-krachten/ansible-role-postgresql_docker/commit/38da442d3023f6c8b1d154424ee40779efe0c719))
+
 # [1.2.0](https://github.com/de-it-krachten/ansible-role-postgresql_docker/compare/v1.1.0...v1.2.0) (2023-09-18)
 
 
