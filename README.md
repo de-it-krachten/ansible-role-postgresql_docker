@@ -13,7 +13,6 @@ Setup PostgreSQL database in Docker
 None
 
 #### Collections
-- community.general
 - community.docker
 
 ## Platforms
@@ -36,8 +35,9 @@ Supported platforms
 - Ubuntu 18.04 LTS<sup>1</sup>
 - Ubuntu 20.04 LTS<sup>1</sup>
 - Ubuntu 22.04 LTS<sup>1</sup>
-- Fedora 37<sup>1</sup>
-- Fedora 38<sup>1</sup>
+- Ubuntu 24.04 LTS<sup>1</sup>
+- Fedora 39<sup>1</sup>
+- Fedora 40<sup>1</sup>
 - Alpine 3<sup>1</sup>
 - Docker dind (CI only)
 
@@ -82,7 +82,7 @@ postgresql_data_dir: /export/docker/postgres/data
 <pre><code>
 - name: sample playbook for role 'postgresql_docker'
   hosts: all
-  become: "yes"
+  become: 'yes'
   vars:
     postgresql_database: db1
     postgresql_username: user1
