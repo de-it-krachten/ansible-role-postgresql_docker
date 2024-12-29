@@ -1,7 +1,8 @@
 ---
 
 - name: Enable Postgres
-  community.docker.docker_compose:
-    project_name: "postgres"
+  community.docker.docker_compose_v2:
+    state: present
     project_src: "{{ postgresql_compose_dir }}/"
-    restarted: yes
+    build: never
+    pull: missing
