@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/de-it-krachten/ansible-role-postgresql_docker/compare/v1.7.0...v1.8.0) (2026-10-13)
+
+
+### Features
+
+* Drop support for Debian 11 (Bullseye) ([7ef6589](https://github.com/de-it-krachten/ansible-role-postgresql_docker/commit/7ef65899f7ba4701f1e66d5f5d9752a013ebdb6f))
+
 # [1.7.0](https://github.com/de-it-krachten/ansible-role-postgresql_docker/compare/v1.6.0...v1.7.0) (2026-07-26)
 
 
